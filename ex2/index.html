@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício de Variáveis</title>
+</head>
+<body>
+    <h1>Minha Atividade de JavaScript</h1>
+    <p>Abra o console (F12) para ver os tipos das variáveis.</p>
+
+    <script>
+        // 1. String
+        let nome = "Jonatthan";
+        // 2. Int
+        let idade = 18;
+        // 3. Float
+        let altura = 1.75;
+        // 4. Booleano
+        let programando = true;
+
+        let variaveis = [nome, idade, altura, programando];
+
+        variaveis.forEach(v => {
+            console.log("Valor:", v, "| Tipo:", typeof v);
+            alert("Valor: " + v + "\nTipo: " + typeof v);
+        });
+    </script>
+</body>
+</html>

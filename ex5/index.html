@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5 - BMI Calculator</title>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <p id="output">Calculation results will appear here...</p>
+
+    <script>
+        // a) Name
+        let name = prompt("Please enter your name:");
+
+        // b) Height (cm)
+        let heightCmInput = prompt("Enter your height in centimeters:");
+
+        // c) Weight (kg)
+        let weightKgInput = prompt("Enter your weight in kg:");
+
+        // d) Convert inputs to Float
+        let heightCm = parseFloat(heightCmInput);
+        let weightKg = parseFloat(weightKgInput);
+
+        // e) Convert Height from cm to meters
+        let heightM = heightCm / 100;
+
+        // f) Calculate BMI (M = weight / height²)
+        let m = weightKg / (heightM * heightM);
+
+        // g) Classification Logic
+        let classification = "";
+
+        if (m < 16) {
+            classification = "Low weight (severe thinness)";
+        } else if (m >= 16 && m <= 16.99) {
+            classification = "Low weight (moderate thinness)";
+        } else if (m >= 17 && m <= 18.49) {
+            classification = "Low weight (mild thinness)";
+        } else if (m >= 18.50 && m <= 24.99) {
+            classification = "Normal weight";
+        } else if (m >= 25 && m <= 29.99) {
+            classification = "Overweight";
+        } else if (m >= 30 && m <= 34.99) {
+            classification = "Obesity Grade I";
+        } else if (m >= 35 && m <= 39.99) {
+            classification = "Obesity Grade II";
+        } else {
+            classification = "Obesity Grade III";
+        }
+
+        // h) Final Output
+        let finalMessage = name + " has a body mass index of " + m.toFixed(2) + ", classified as: " + classification + ".";
+
+        alert(finalMessage);
+        document.getElementById("output").innerText = finalMessage;
+    </script>
+</body>
+</html>

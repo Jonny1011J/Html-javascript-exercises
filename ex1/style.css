@@ -1,0 +1,18 @@
+/*Utilizando um arquivo css externo, deve alterar a
+fonte, tamanho e cor do texto. Deve colocar a imagem centralizada, e arredondar
+os cantos. Fique à vontade para explorar outras formatações. */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+h1{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: green;
+}
+
+img{
+    border-radius: 15px;
+}

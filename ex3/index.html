@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+    <h1 id="main-title">Welcome</h1>
+
+    <h2 id="change">This text will be changed.</h2>
+
+    <p>This is a paragraph.</p>
+
+    <div>This is a div.</div> 
+
+    <input type="text" placeholder="i am an input field">
+
+    <script>
+
+        let newText = prompt("Enter the new text for the subheading element:");
+
+        if (newText !== null && newText !== "") {
+            document.getElementById("change").innerText = newText;
+        }
+    </script>
+
+</body>
+</html>

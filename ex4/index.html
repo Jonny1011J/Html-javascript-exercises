@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 4</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p id="result">The result will be displayed here.</p>
+
+    <script>
+
+        let operation = prompt("Choose an operation: sum, subtraction, multiplication, division").toLowerCase();
+        let num1 = Number(prompt("Enter the first number:"));
+        let num2 = Number(prompt("Enter the second number:"));
+
+        let result;
+
+        if (operation === "sum" || operation === "+") {
+            result = num1 + num2;
+        } else if (operation === "subtraction" || operation === "-") {
+            result = num1 - num2;
+        } else if (operation === "multiplication" || operation === "*") {
+            result = num1 * num2;
+        } else if (operation === "division" || operation === "/") {
+            if (num2 !== 0) {
+                result = num1 / num2;
+            } else {
+                result = "Error: Division by zero!";
+            }
+        } else {
+            result = "Invalid operation selected.";
+        }
+
+        alert("The result is: " + result);
+        document.getElementById("result").innerText = "Result: " + result;
+        console.log("Operation:", operation, "| Result:", result);
+    </script>
+</body>
+</html>
